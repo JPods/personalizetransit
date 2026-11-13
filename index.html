@@ -19,6 +19,7 @@
     <li><a href="/index.html#scorecard">Compare</a></li>
     <li><a href="/index.html#process">For Cities</a></li>
     <li><a href="/index.html" class="jpods-nav-back">← Home</a></li>
+    <li><a href="ecosystem.html" class="jpods-nav-cta" style="background:#1a7a3a;">Eco-System</a></li>
     <li><a href="/index.html#contact" class="jpods-nav-cta">Get Involved</a></li>
   </ul>
   <div class="theme-toggle" role="group" aria-label="Color theme">
@@ -328,6 +329,82 @@
   }
   .prompt-tab-content .copy-btn:hover { background: var(--blue); }
 
+  /* ─── NON-US NOTICE (all tabs) ─── */
+  .non-us { max-width: 860px; margin: 14px auto 0; padding: 10px 16px; font-size: 13px; line-height: 1.55;
+            color: #FCD34D; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.35); border-radius: 8px; }
+  .non-us b { color: #FBBF24; }
+  body.theme-light .non-us { color: var(--warn-text); background: var(--warn-bg); border-color: var(--warn-border); }
+  body.theme-light .non-us b { color: var(--warn-header); }
+  @media (max-width: 900px) { .non-us { margin: 12px 16px 0; } }
+
+  /* ─── MESHMOBILITY TAB ─── */
+  .mm-tab { max-width: 1100px; }
+  .mm-tab .tab-intro { max-width: 760px; }
+  .mm-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+  .mm-step { background: #1a1f2e; border: 1px solid rgba(57,255,20,0.15); border-radius: 8px; padding: 14px;
+             font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.7); }
+  .mm-step b { display: block; color: #7DD3FC; font-size: 14px; margin-bottom: 4px; }
+  .mm-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .mm-cta { padding: 9px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none;
+            color: #dbeafe; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); }
+  .mm-cta:hover { background: rgba(255,255,255,0.14); }
+  .mm-cta.primary { background: #1a7a3a; border-color: #1a7a3a; color: #fff; }
+  .mm-cta.primary:hover { background: #22914a; }
+  .mm-h3 { font-size: 17px; font-weight: 600; color: #fff; margin: 26px 0 12px; }
+  .mm-report { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+  .mm-report-img img { display: block; width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+  .mm-report-text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.75); }
+  .mm-report-text p { margin-bottom: 12px; }
+  .mm-report-text ul { margin: 0 0 14px 18px; }
+  .mm-report-text li { margin-bottom: 6px; }
+  .mm-report-text b, .mm-net b, .mm-lede b { color: #fff; }
+  .mm-net { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 18px; }
+  .mm-lede { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
+  .mm-legend { display: inline-flex; gap: 12px; flex-wrap: wrap; margin-left: 6px; }
+  .mm-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
+  .mm-tab .stage { margin: 0 0 12px; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; overflow: hidden;
+                   cursor: zoom-in; background: #0d1117; }
+  .mm-tab .stage img { display: block; width: 100%; height: auto; }
+  .mm-tab .stage figcaption { padding: 12px 16px 14px; font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.55; }
+  .mm-tab .stage figcaption b { color: #fff; margin-right: 6px; }
+  .mm-tab .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 32px; }
+  .mm-tab .shot { margin: 0; background: #1a1f2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+                  overflow: hidden; cursor: pointer; transition: border-color 0.15s; }
+  .mm-tab .shot:hover { border-color: rgba(57,255,20,0.5); }
+  .mm-tab .shot.on { border-color: #39ff14; box-shadow: 0 0 0 1px #39ff14; }
+  .mm-tab .shot img { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: left center; }
+  .mm-tab .shot figcaption { padding: 8px 10px 10px; font-size: 13px; }
+  .mm-tab .shot figcaption b { color: #e5e7eb; }
+  .mm-tab .shot.on figcaption b { color: #39ff14; }
+  .mm-tab .shot figcaption span { display: none; }
+  body.theme-light .mm-step, body.theme-light .mm-tab .shot { background: #f0f4f8; border-color: #d0e0f0; color: #333; }
+  body.theme-light .mm-step b, body.theme-light .mm-h3 { color: var(--blue); }
+  body.theme-light .mm-report-text, body.theme-light .mm-net, body.theme-light .mm-lede,
+  body.theme-light .mm-tab .stage figcaption { color: #333; }
+  body.theme-light .mm-report-text b, body.theme-light .mm-net b, body.theme-light .mm-lede b,
+  body.theme-light .mm-tab .stage figcaption b, body.theme-light .mm-tab .shot figcaption b { color: #111; }
+  body.theme-light .mm-tab .stage { background: #fff; border-color: #ccd; }
+  body.theme-light .mm-tab .shot.on { border-color: #1a7a00; box-shadow: 0 0 0 1px #1a7a00; }
+  body.theme-light .mm-tab .shot.on figcaption b { color: #1a7a00; }
+  body.theme-light .mm-cta { color: var(--blue); background: #fff; border-color: #c8d6e5; }
+  body.theme-light .mm-cta.primary { color: #fff; background: #1a7a3a; }
+  @media (max-width: 900px) {
+    .mm-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .mm-report { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) { .mm-tab .shots { gap: 8px; } .mm-tab .shot figcaption { font-size: 11px; padding: 6px 8px 8px; } }
+
+  .lightbox { position: fixed; inset: 0; background: rgba(4,8,14,0.95); display: none; flex-direction: column;
+              align-items: center; justify-content: center; z-index: 1000; padding: 16px; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: calc(100vh - 110px); border-radius: 6px; }
+  .lightbox .lb-cap { color: #e5e7eb; margin-top: 14px; font-size: 14px; text-align: center; max-width: 900px; line-height: 1.5; }
+  .lightbox button { position: absolute; background: rgba(255,255,255,0.08); color: #eee; border: 1px solid rgba(255,255,255,0.2);
+                     border-radius: 8px; font-size: 24px; width: 48px; height: 48px; cursor: pointer; }
+  .lightbox .lb-close { top: 16px; right: 16px; }
+  .lightbox .lb-prev { left: 16px; top: 50%; }
+  .lightbox .lb-next { right: 16px; top: 50%; }
+
   /* Carbon calculator */
   .carbon-calc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
   .carbon-calc .cc-field label { display: block; font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
@@ -467,10 +544,16 @@
 <!-- ═══ TABS ═══ -->
 <div class="pt-tabs">
   <button class="pt-tab active" onclick="switchTab('city',this)">Your City</button>
+  <button class="pt-tab" id="tab-mesh" onclick="switchTab('mesh',this)">MeshMobility</button>
   <button class="pt-tab" onclick="switchTab('realestate',this)">Real Estate</button>
   <button class="pt-tab" onclick="switchTab('energy',this)">Energy &amp; Carbon</button>
   <button class="pt-tab" onclick="switchTab('cost',this)">Cost Model</button>
   <button class="pt-tab" onclick="switchTab('library',this)">Library</button>
+</div>
+<div class="non-us">
+  <b>Outside the United States?</b> The linked data &mdash; US Census, FHWA road miles, Walk Score, EIA gas prices,
+  and the crash and traffic overlays in MeshMobility &mdash; covers US cities only. Fill in the figures for your area,
+  or adjust the AI prompts for your country (its data sources, currency and units).
 </div>
 
 <!-- ═══ TAB: YOUR CITY (existing citytool) ═══ -->
@@ -489,7 +572,7 @@
         <input type="text" id="stateAbbr" placeholder="ST" maxlength="2" class="state-input" onkeydown="if(event.key==='Enter')searchCity()"/>
         <button class="search-btn" id="searchBtn" onclick="searchCity()">Look up</button>
       </div>
-      <div class="search-status" id="searchStatus">Enter any US city — checks local cache first, then queries Census Bureau live.</div>
+      <div class="search-status" id="searchStatus">Enter any US city — checks local cache first, then queries Census Bureau live. Outside the US: enter your city and a two-letter country code, then fill in your own figures.</div>
     </div>
 
     <!-- LOCKED HINT -->
@@ -610,6 +693,7 @@
       <div class="placeholder">
         <h3>Awaiting City Search</h3>
         <p>Enter your city name and state above, then click <strong>Look up</strong> to pre-fill data from public sources.</p>
+        <p style="margin-top:10px"><a href="#tulsa">See a finished example: Tulsa &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -1041,7 +1125,7 @@ async function searchCity(){
   ['demo','infra','const'].forEach(s=>document.getElementById('edt-'+s).classList.remove('visible'));
   document.getElementById('lockedHint').classList.add('hidden');
   document.getElementById('calcBtn').disabled=false;
-  status.innerHTML='⚠ "'+city+', '+state.toUpperCase()+'" not found in Census database. <strong>Enter your data manually below.</strong>';
+  status.innerHTML='⚠ "'+city+', '+state.toUpperCase()+'" not found in Census database. <strong>Enter your data manually below.</strong> Outside the US, use figures for your area; the ★ assumptions are US averages — adjust them to your country.';
   status.className='search-status error';
   btn.disabled=false;
 }
@@ -1507,6 +1591,140 @@ function populateLibrary() {
 </script>
 </div><!-- /panel-city -->
 
+<!-- ═══ TAB: MESHMOBILITY + TULSA EXAMPLE ═══ -->
+<div class="pt-panel" id="panel-mesh">
+<div class="prompt-tab-content mm-tab">
+  <h2>Mesh<span>Mobility</span></h2>
+  <p class="tab-intro">
+    Personalize Transit gives you your city's numbers in ten seconds. MeshMobility is where you draw the network:
+    free software that lays a JPods network on a real map of your city, puts real data under it, and shows how far
+    people can travel door to door.
+  </p>
+
+  <div class="mm-steps">
+    <div class="mm-step"><b>1 &middot; Find your city</b>One click fits a complete network to the city boundary, aligned to the street grid.</div>
+    <div class="mm-step"><b>2 &middot; Overlay the data</b>Traffic counts, fatal and all crashes, population, property values and jobs, on the map.</div>
+    <div class="mm-step"><b>3 &middot; Design</b>Place stations and circles, connect guideways, route around obstacles with waypoints.</div>
+    <div class="mm-step"><b>4 &middot; Measure</b>Isochrones show walk&ndash;ride&ndash;walk time from any point. The simulator runs pods through the network.</div>
+  </div>
+  <div class="mm-ctas">
+    <a class="mm-cta primary" href="https://meshmobility.com/app" target="_blank" rel="noopener">Launch MeshMobility</a>
+    <a class="mm-cta" href="https://meshmobility.com/#tulsa" target="_blank" rel="noopener">Tulsa on MeshMobility.com</a>
+  </div>
+
+  <h2 id="tulsa" style="margin-top:44px">Example: <span>Tulsa, Oklahoma</span></h2>
+
+  <h3 class="mm-h3">Step 1 &mdash; The ten-second report</h3>
+  <div class="mm-report">
+    <a class="mm-report-img" href="images/tulsa/tulsa-report.pdf" target="_blank" rel="noopener" title="Open the Tulsa report (PDF)">
+      <img src="images/tulsa/tulsa-report.jpg" alt="Personalize Transit report for Tulsa, Oklahoma" loading="lazy">
+    </a>
+    <div class="mm-report-text">
+      <p>This is the <b>Your City</b> tab, run for Tulsa. Census data fills the inputs; the JPods standard assumptions (&#9733;) do the rest.</p>
+      <ul>
+        <li><b>$3.78B</b> to build the network, privately funded</li>
+        <li><b>$1.61B a year</b> saved, most of it in cars households no longer need</li>
+        <li><b>$7.52B</b> one-time value: capital unlocked from vehicles</li>
+        <li><b>840K tonnes</b> of CO&#8322; a year eliminated</li>
+      </ul>
+      <p>The report sizes the network by a rule of thumb: road miles &divide; 12 = <b>189 guideway miles</b>. Step 2 replaces the rule with a drawn network.</p>
+      <div class="mm-ctas">
+        <a class="mm-cta" href="images/tulsa/tulsa-report.pdf" target="_blank" rel="noopener">&#11015; Report (PDF)</a>
+        <a class="mm-cta" href="?city=Tulsa,%20Oklahoma">Run Tulsa yourself</a>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mm-h3">Step 2 &mdash; The network in MeshMobility</h3>
+  <p class="mm-net"><b>349</b> stations &middot; <b>116</b> circles &middot; <b>267.8 mi</b> of guideway &middot; <b>17,242</b> columns &middot; <b>267.8 MW</b> of solar</p>
+
+  <p class="mm-lede"><b>How far can you get?</b> Each isochrone is timed door to door from one point: walk to a station, ride, walk to the destination.
+    <span class="mm-legend"><span><i style="background:#22c55e"></i>5 min</span><span><i style="background:#3b82f6"></i>10 min</span><span><i style="background:#eab308"></i>20 min</span><span><i style="background:#ef4444"></i>30 min</span></span></p>
+  <figure class="stage"><img alt=""><figcaption></figcaption></figure>
+  <div class="shots">
+    <figure class="shot"><img src="images/tulsa/iso-cbd.jpg" alt="Isochrone from Tulsa's Central Business District" loading="lazy">
+      <figcaption><b>Central Business District</b><span>From downtown, the rings show how much of Tulsa is within 5, 10, 20 and 30 minutes.</span></figcaption></figure>
+    <figure class="shot"><img src="images/tulsa/iso-expo.jpg" alt="Isochrone from the Tulsa Expo Center" loading="lazy">
+      <figcaption><b>Expo Center</b><span>The same network timed from the fairgrounds. An event crowd leaves on the network, not in a parking lot.</span></figcaption></figure>
+    <figure class="shot"><img src="images/tulsa/iso-71st.jpg" alt="Isochrone from 71st Street" loading="lazy">
+      <figcaption><b>71st Street</b><span>A dense crash area. Timed from where people are being hurt.</span></figcaption></figure>
+  </div>
+
+  <p class="mm-lede"><b>The tool.</b> Real data on the map, every assumption in the open, and the tools to change the design.</p>
+  <figure class="stage"><img alt=""><figcaption></figcaption></figure>
+  <div class="shots">
+    <figure class="shot"><img src="images/tulsa/overlay-fatal.jpg" alt="Fatal crash overlay on the Tulsa network" loading="lazy">
+      <figcaption><b>Overlay: fatal crashes</b><span>Fatal crashes plotted under the network. Traffic counts, all crashes, population, property values and jobs are one click away.</span></figcaption></figure>
+    <figure class="shot"><img src="images/tulsa/settings.jpg" alt="Simulation settings panel" loading="lazy">
+      <figcaption><b>Settings</b><span>Speed, acceleration, pods per station and station timing. Change an assumption and run the simulation again.</span></figcaption></figure>
+    <figure class="shot"><img src="images/tulsa/tools.jpg" alt="Design tools panel" loading="lazy">
+      <figcaption><b>Tools</b><span>Place stations and circles, connect guideways, route around obstacles with waypoints, or auto-connect the mesh.</span></figcaption></figure>
+  </div>
+  <div class="mm-ctas" style="justify-content:center">
+    <a class="mm-cta primary" href="https://meshmobility.com/app" target="_blank" rel="noopener">Design your city in MeshMobility</a>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous">&#8249;</button>
+  <img alt="">
+  <div class="lb-cap"></div>
+  <button class="lb-next" aria-label="Next">&#8250;</button>
+</div>
+<script>
+// Featured image + thumbnails per group; the featured image opens a full-screen viewer (←/→, Esc).
+(function () {
+  var shots = Array.prototype.slice.call(document.querySelectorAll('#panel-mesh .shot'));
+  var box = document.getElementById('lightbox');
+  var img = box.querySelector('img'), cap = box.querySelector('.lb-cap'), i = 0;
+  function show(n) {
+    i = (n + shots.length) % shots.length;
+    var s = shots[i].querySelector('img');
+    img.src = s.src; img.alt = s.alt;
+    cap.innerHTML = shots[i].querySelector('figcaption').innerHTML.replace('</b>', '</b> — ');
+    shots[i].click();
+    box.classList.add('open');
+  }
+  function hide() { box.classList.remove('open'); }
+  document.querySelectorAll('#panel-mesh .stage').forEach(function (stage) {
+    var group = Array.prototype.slice.call(stage.nextElementSibling.querySelectorAll('.shot'));
+    var simg = stage.querySelector('img'), scap = stage.querySelector('figcaption'), cur = 0;
+    function select(k) {
+      cur = k;
+      group.forEach(function (g, m) { g.classList.toggle('on', m === k); });
+      var t = group[k].querySelector('img');
+      simg.src = t.src; simg.alt = t.alt;
+      scap.innerHTML = group[k].querySelector('figcaption').innerHTML;
+    }
+    group.forEach(function (g, k) { g.addEventListener('click', function () { select(k); }); });
+    stage.addEventListener('click', function () { show(shots.indexOf(group[cur])); });
+    select(0);
+  });
+  // Deep link: personalizetransit.com/#tulsa or /#meshmobility opens this tab
+  function openFromHash() {
+    var h = location.hash;
+    if (h !== '#tulsa' && h !== '#meshmobility') return;
+    switchTab('mesh', document.getElementById('tab-mesh'));
+    var t = document.getElementById(h === '#tulsa' ? 'tulsa' : 'panel-mesh');
+    if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+  box.querySelector('.lb-close').addEventListener('click', hide);
+  box.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(i - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) hide(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.classList.contains('open')) return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
+</div><!-- /panel-mesh -->
+
 <!-- ═══ TAB: REAL ESTATE ═══ -->
 <div class="pt-panel" id="panel-realestate">
 <div class="prompt-tab-content">
@@ -1552,7 +1770,7 @@ Address these dimensions:
 Reference: Only 1.2% of American cities are walkable today, yet they produce 20% of US GDP.
 Reference: JPods 5X5 Standard — networks must produce 5x the energy they consume and 5x the value of the land they occupy.
 
-Present findings with specific dollar amounts for [YOUR CITY].</pre>ShareOfTripsByMile.png
+Present findings with specific dollar amounts for [YOUR CITY].</pre>
     <button class="copy-btn" onclick="copyPrompt('rePrompt')">Copy Prompt</button>
   </div>
 </div>
