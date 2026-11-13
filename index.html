@@ -7,27 +7,6 @@
 </head>
 <body>
 
-<!-- ══ JPODS NAV ══ -->
-<nav class="jpods-nav">
-  <a href="/index.html" class="jpods-nav-logo">
-    <img src="images/ingenuity/JPodsVectorLogo_BlueLg2.png" alt="JPods">
-  </a>
-  <ul class="jpods-nav-links">
-    <li><a href="/index.html#story">Why/What/How</a></li>
-    <li><a href="/index.html#how">How It Works</a></li>
-    <li><a href="/index.html#proof">Track Record</a></li>
-    <li><a href="/index.html#scorecard">Compare</a></li>
-    <li><a href="/index.html#process">For Cities</a></li>
-    <li><a href="/index.html" class="jpods-nav-back">← Home</a></li>
-    <li><a href="ecosystem.html" class="jpods-nav-cta" style="background:#1a7a3a;">Eco-System</a></li>
-    <li><a href="/index.html#contact" class="jpods-nav-cta">Get Involved</a></li>
-  </ul>
-  <div class="theme-toggle" role="group" aria-label="Color theme">
-    <button class="tt-btn" onclick="setTheme('dark',this)">Dark</button>
-    <button class="tt-btn" onclick="setTheme('light',this)">Light</button>
-    <button class="tt-btn" onclick="setTheme('hico',this)">Hi-Con</button>
-  </div>
-</nav>
 
 <div class="jpods-fullwidth">
 
@@ -37,79 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Bebas+Neue&family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/docx@9.0.3/build/index.umd.min.js"></script>
 <style>
-  /* ─── JPODS NAV ─── */
-  .jpods-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0.9rem 2.5rem;
-    background: rgba(8,8,8,0.95);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(57,255,20,0.15);
-    font-family: 'Barlow', sans-serif;
-  }
-  .jpods-nav-logo img { height: 40px; mix-blend-mode: screen; display: block; }
-  .jpods-nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-  .jpods-nav-links a {
-    color: #f0ede6; text-decoration: none;
-    font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    opacity: 0.55; transition: opacity 0.2s, color 0.2s;
-  }
-  .jpods-nav-links a:hover { opacity: 1; color: #39ff14; }
-  .jpods-nav-back {
-    background: rgba(57,255,20,0.12) !important;
-    border: 1px solid rgba(57,255,20,0.4) !important;
-    color: #39ff14 !important; padding: 0.45rem 1.1rem;
-    border-radius: 2px; font-weight: 700 !important;
-    opacity: 1 !important; font-size: 0.72rem !important;
-    letter-spacing: 0.12em; transition: background 0.2s !important;
-  }
-  .jpods-nav-back:hover { background: rgba(57,255,20,0.22) !important; }
-  .jpods-nav-cta {
-    background: #39ff14 !important; color: #080808 !important;
-    padding: 0.45rem 1.1rem; border-radius: 2px;
-    font-weight: 700 !important; opacity: 1 !important;
-    font-size: 0.72rem !important; letter-spacing: 0.1em;
-  }
-  .jpods-nav-cta:hover { filter: brightness(1.12); opacity: 1 !important; }
-
-  /* ─── THEME TOGGLE ─── */
-  .theme-toggle {
-    display: flex; align-items: center; gap: 3px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 3px; padding: 3px; margin-left: 0.8rem; flex-shrink: 0;
-  }
-  .tt-btn {
-    font-family: 'DM Mono', monospace; font-size: 0.58rem;
-    font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 0.3rem 0.65rem; border-radius: 2px; border: none;
-    cursor: pointer; transition: all 0.2s;
-    color: rgba(240,237,230,0.4); background: transparent;
-  }
-  .tt-btn.active { background: #39ff14; color: #080808; }
-  .tt-btn:not(.active):hover { color: rgba(240,237,230,0.85); }
-  body.theme-light .tt-btn { color: rgba(0,0,0,0.35); }
-  body.theme-light .tt-btn.active { background: #1a7a00; color: #fff; }
-  body.theme-light .theme-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.12); }
-  body.theme-light .jpods-nav { background: rgba(245,240,232,0.96) !important; border-bottom-color: rgba(26,122,0,0.25) !important; }
-  body.theme-light .jpods-nav-links a { color: #0f0f0f !important; }
-  body.theme-light .jpods-nav-cta { background: #1a7a00 !important; color: #fff !important; }
-  body.theme-light .jpods-nav-back { background: rgba(26,122,0,0.1) !important; color: #1a7a00 !important; border-color: rgba(26,122,0,0.4) !important; }
-  body.theme-light { background: #f0f4f8 !important; }
-  body.theme-light .hero { background: linear-gradient(135deg, #e8f0f8 0%, #d0e4f0 60%, #b8d4e8 100%) !important; }
-  body.theme-light .input-panel, body.theme-light .output-panel { box-shadow: 0 4px 24px rgba(0,0,0,0.1) !important; }
-  body.theme-hico { background: #000 !important; color: #fff !important; }
-  body.theme-hico .jpods-nav { background: rgba(0,0,0,0.99) !important; border-bottom-color: rgba(57,255,20,0.5) !important; }
-  body.theme-hico .jpods-nav-links a { color: #fff !important; }
-  body.theme-hico a { color: #39ff14 !important; }
-  body.theme-hico .hero { background: #000 !important; }
-  body.theme-hico .input-panel, body.theme-hico .output-panel { background: #0a0a0a !important; border: 1px solid rgba(255,255,255,0.15) !important; }
-  body.theme-hico .panel-header { background: #111 !important; }
-  body.theme-hico .field input { background: #111 !important; color: #fff !important; border-color: rgba(255,255,255,0.2) !important; }
-  body.theme-hico .dtable td { border-bottom-color: rgba(255,255,255,0.08) !important; }
-  body.theme-hico .dlbl { color: #ccc !important; }
-  body.theme-hico .dval { color: #39ff14 !important; }
   :root {
     --blue:#1F4E79;--mid:#2E75B6;--light:#D6E4F0;
     --orange:#C55A11;--orange-light:#FCE4D6;
@@ -118,7 +24,7 @@
     --warn-bg:#FFF8E1;--warn-border:#F59E0B;--warn-text:#92400E;--warn-header:#B45309;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'DM Sans',sans-serif;background:#0d1117;color:#1a1a1a;min-height:100vh;padding-top:64px;}
+  body{font-family:'DM Sans',sans-serif;background:#0d1117;color:#1a1a1a;min-height:100vh;}
 
   /* HERO */
   .hero{background:linear-gradient(135deg,#0d1117 0%,#1F4E79 60%,#2E75B6 100%);padding:28px 32px 36px;text-align:center;position:relative;overflow:hidden;}
@@ -267,7 +173,7 @@
     display: flex; gap: 0; background: rgba(8,8,8,0.95);
     border-bottom: 2px solid rgba(57,255,20,0.2);
     padding: 0 24px; overflow-x: auto;
-    position: sticky; top: 64px; z-index: 190;
+    position: sticky; top: 0; z-index: 190; align-items: center;
     backdrop-filter: blur(16px);
   }
   .pt-tab {
@@ -279,11 +185,13 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .pt-tab:hover { color: rgba(240,237,230,0.85); }
+  a.pt-tab { text-decoration: none; display: inline-block; }
+  .pt-tabs a[target="_blank"]:not(.pt-logo)::after { content: "\00a0\2197"; font-size: 0.85em; opacity: 0.7; }
+  .pt-logo { display: flex; align-items: center; padding: 6px 18px 6px 0; flex-shrink: 0; }
+  .pt-logo img { height: 34px; mix-blend-mode: screen; display: block; }
+  .pt-ext { margin-left: auto; }
+  .pt-cta { color: #39ff14 !important; }
   .pt-tab.active { color: #39ff14; border-bottom-color: #39ff14; }
-  body.theme-light .pt-tabs { background: rgba(245,240,232,0.96); border-bottom-color: rgba(26,122,0,0.25); }
-  body.theme-light .pt-tab { color: rgba(0,0,0,0.4); }
-  body.theme-light .pt-tab.active { color: #1a7a00; border-bottom-color: #1a7a00; }
-  body.theme-hico .pt-tabs { background: #000; border-bottom-color: rgba(57,255,20,0.5); }
   .pt-panel { display: none; }
   .pt-panel.active { display: block; }
 
@@ -333,8 +241,6 @@
   .non-us { max-width: 860px; margin: 14px auto 0; padding: 10px 16px; font-size: 13px; line-height: 1.55;
             color: #FCD34D; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.35); border-radius: 8px; }
   .non-us b { color: #FBBF24; }
-  body.theme-light .non-us { color: var(--warn-text); background: var(--warn-bg); border-color: var(--warn-border); }
-  body.theme-light .non-us b { color: var(--warn-header); }
   @media (max-width: 900px) { .non-us { margin: 12px 16px 0; } }
 
   /* ─── MESHMOBILITY TAB ─── */
@@ -377,17 +283,6 @@
   .mm-tab .shot figcaption b { color: #e5e7eb; }
   .mm-tab .shot.on figcaption b { color: #39ff14; }
   .mm-tab .shot figcaption span { display: none; }
-  body.theme-light .mm-step, body.theme-light .mm-tab .shot { background: #f0f4f8; border-color: #d0e0f0; color: #333; }
-  body.theme-light .mm-step b, body.theme-light .mm-h3 { color: var(--blue); }
-  body.theme-light .mm-report-text, body.theme-light .mm-net, body.theme-light .mm-lede,
-  body.theme-light .mm-tab .stage figcaption { color: #333; }
-  body.theme-light .mm-report-text b, body.theme-light .mm-net b, body.theme-light .mm-lede b,
-  body.theme-light .mm-tab .stage figcaption b, body.theme-light .mm-tab .shot figcaption b { color: #111; }
-  body.theme-light .mm-tab .stage { background: #fff; border-color: #ccd; }
-  body.theme-light .mm-tab .shot.on { border-color: #1a7a00; box-shadow: 0 0 0 1px #1a7a00; }
-  body.theme-light .mm-tab .shot.on figcaption b { color: #1a7a00; }
-  body.theme-light .mm-cta { color: var(--blue); background: #fff; border-color: #c8d6e5; }
-  body.theme-light .mm-cta.primary { color: #fff; background: #1a7a3a; }
   @media (max-width: 900px) {
     .mm-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .mm-report { grid-template-columns: 1fr; }
@@ -436,19 +331,7 @@
   }
   .lib-table th:nth-child(n+3) { text-align: right; }
   .lib-table td:nth-child(6) { font-weight: 600; color: #7DD3FC; }
-  body.theme-light .lib-table td:nth-child(6) { color: var(--blue); }
   .lib-table tr:hover td { background: rgba(57,255,20,0.03); }
-  body.theme-light .prompt-tab-content h2 { color: #1a1a1a; }
-  body.theme-light .prompt-tab-content .tab-intro { color: #555; }
-  body.theme-light .prompt-tab-content .prompt-box { background: #f0f4f8; border-color: #d0e0f0; }
-  body.theme-light .prompt-tab-content .prompt-box h3 { color: var(--blue); }
-  body.theme-light .prompt-tab-content .prompt-box p { color: #333; }
-  body.theme-light .prompt-tab-content .prompt-box pre { background: #fff; border-color: #ddd; color: #333; }
-  body.theme-light .cc-stat { background: #e8f0f8; }
-  body.theme-light .cc-stat .cc-val { color: var(--green); }
-  body.theme-light .carbon-calc .cc-field input { background: #fff; border-color: #ccc; color: #1a1a1a; }
-  body.theme-light .lib-table th { color: var(--blue); border-bottom-color: #ccc; }
-  body.theme-light .lib-table td { color: #333; border-bottom-color: #eee; }
 
   @keyframes spin{to{transform:rotate(360deg);}}
   .spin{display:inline-block;width:12px;height:12px;border:2px solid #ccc;border-top-color:var(--mid);border-radius:50%;animation:spin 0.7s linear infinite;margin-right:6px;vertical-align:middle;}
@@ -472,7 +355,7 @@
     html, body { background: #fff !important; color: #000 !important; padding: 0 !important; margin: 0 !important; }
 
     /* Hide chrome */
-    .jpods-nav, .moverlay, .hero-print-btn,
+    .pt-tabs, .non-us, .moverlay, .hero-print-btn,
     .search-section, .locked-hint,
     .edit-btn, .reset-lnk, .mod-badge,
     .action-section, .watermark,
@@ -543,12 +426,15 @@
 
 <!-- ═══ TABS ═══ -->
 <div class="pt-tabs">
+  <a class="pt-logo" href="https://jpods.com" target="_blank" rel="noopener" title="JPods.com"><img src="images/ingenuity/JPodsVectorLogo_BlueLg2.png" alt="JPods"></a>
   <button class="pt-tab active" onclick="switchTab('city',this)">Your City</button>
-  <button class="pt-tab" id="tab-mesh" onclick="switchTab('mesh',this)">MeshMobility</button>
+  <button class="pt-tab" id="tab-mesh" onclick="switchTab('mesh',this)">Tulsa Example</button>
   <button class="pt-tab" onclick="switchTab('realestate',this)">Real Estate</button>
   <button class="pt-tab" onclick="switchTab('energy',this)">Energy &amp; Carbon</button>
   <button class="pt-tab" onclick="switchTab('cost',this)">Cost Model</button>
   <button class="pt-tab" onclick="switchTab('library',this)">Library</button>
+  <a class="pt-tab pt-ext" href="https://meshmobility.com" target="_blank" rel="noopener">Mesh Mobility</a>
+  <a class="pt-tab pt-cta" href="https://jpods.com/#contact" target="_blank" rel="noopener">Get Involved</a>
 </div>
 <div class="non-us">
   <b>Outside the United States?</b> The linked data &mdash; US Census, FHWA road miles, Walk Score, EIA gas prices,
@@ -1462,20 +1348,6 @@ async function downloadDocx(){
   const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`JPods_Prompt_${city.replace(/\s+/g,'_')}.docx`;a.click();
 }
 
-// ── THEME TOGGLE ────────────────────────────────────────────
-function setTheme(mode, btn) {
-  document.body.classList.remove('theme-light','theme-hico');
-  if (mode !== 'dark') document.body.classList.add('theme-' + mode);
-  document.querySelectorAll('.tt-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  localStorage.setItem('jpods-theme', mode);
-}
-(function() {
-  const saved = localStorage.getItem('jpods-theme') || 'dark';
-  const btn = document.querySelector('.tt-btn[onclick*="' + saved + '"]');
-  setTheme(saved, btn);
-})();
-
 // ── TAB SWITCHING ────────────────────────────────────────────
 function switchTab(id, btn) {
   document.querySelectorAll('.pt-panel').forEach(p => p.classList.remove('active'));
@@ -1701,12 +1573,12 @@ function populateLibrary() {
     stage.addEventListener('click', function () { show(shots.indexOf(group[cur])); });
     select(0);
   });
-  // Deep link: personalizetransit.com/#tulsa or /#meshmobility opens this tab
+  // Deep link: personalizetransit.com/#tulsa opens this tab
   function openFromHash() {
     var h = location.hash;
-    if (h !== '#tulsa' && h !== '#meshmobility') return;
+    if (h !== '#tulsa') return;
     switchTab('mesh', document.getElementById('tab-mesh'));
-    var t = document.getElementById(h === '#tulsa' ? 'tulsa' : 'panel-mesh');
+    var t = document.getElementById('tulsa');
     if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
   }
   window.addEventListener('hashchange', openFromHash);
